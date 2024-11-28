@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.E.P.A Informatica</title>
+    <style>
+
+        body {
+            font-family: sans-serif;
+            background-color: #796cb5; /* Light gray background */
+            color: #2f2f31; /* Dark gray text */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #796cb5; /* Dark gray header */
+            color: #080863;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color:
+            #d8caca; /* Light gray navigation */
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #7d6e6e;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Style for active tab */
+        .active {
+            background-color: #d6ebeb; /* Slightly darker gray for active tab */
+            border-radius: 15px;
+            padding: 1rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <img id="logo" src="imagenes/Sepa Info logo gif2.gif" alt="Logo">  
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showTab('inicio')" class="active" id="inicioTab">Inicio</a></li>
+            <li><a href="#" onclick="showTab('contacto')" id="contactoTab">Contacto</a></li>
+            <li><a href="#" onclick="showTab('servicios')" id="serviciosTab">Servicios</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+
+        <h2>Sobre Nosotros</h2>
+        <p>Nuestra Microempresa S.E.P.A. Informática, pone a su consideración equipos y servicios informáticos que apoyan las tareas de las 
+            organizaciones en nuestro país. 
+            Somos una empresa de tecnología que proporciona soluciones que cubren las más altas exigencias de los clientes. 
+            Contamos con  personal calificado  y  certificado  que  garantiza  una  atención de calidad. 
+            Queremos reiterar nuestro compromiso y agradecimiento, así mismo esperamos poder servirle en sus futuros pedidos y
+            requerimientos informáticos, con la calidad y el servicio que usted y su empresa se merece.</p>
+        
+                     <p>S.E.P.A. Informatica.</p>
+                     <p>Pablo Cousillas.</p>
+                     <p>Tecnico en reparacion de PC y Notebook.</p>
+
+    <section>
+
+    <section id="contacto" style="display:none;">  
+
+        <h2>Contacto</h2>
+        <p>Para Consultas y Presupuestos comunicarse:</p>
+        <p>Mail: sepa.informatica@gmail.com</p>
+        <img id="img2" src="imagenes/mail.gif" alt="mail">
+
+    </section>
+
+    <section id="servicios" style="display:none;">
+
+        <img id="img1" src="imagenes/reparacion de pc.png" alt="img">
+        <h2>Servicios</h2>
+        <p>* Realizamos el mantenimiento preventivo y correctivo de equipo</p>
+        <p>* Computadoras de escritorio</p>
+        <p>* Computadoras de portatiles</p>
+        <p>* Armado y Reparacion de PC</p>
+        <p>* Recuperacion de Datos</p>
+        <p>* Actualizacion de Sistemas Operativos</p>
+        <p>* Asistencia tecnica de usuarios On Line y Domicilio</p>
+        <p>* Video Vigilancia - Realizamos instalación y configuración de sistemas de video  vigilancia. 
+            • Cámaras IP alta calidad 
+            • interiores, exteriores 
+            • alámbricas, inalámbricas 
+            • Cámaras análogas 
+            • DVR /  NAS</p>
+    </section>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all sections
+            document.getElementById('inicio').style.display = 'none';
+            document.getElementById('contacto').style.display = 'none';
+            document.getElementById('servicios').style.display = 'none';
+
+            // Remove 'active' class from all tabs
+            document.getElementById('inicioTab').classList.remove('active');
+            document.getElementById('contactoTab').classList.remove('active');
+            document.getElementById('serviciosTab').classList.remove('active');
+
+            // Show the selected section and add 'active' class to the corresponding tab
+            document.getElementById(tabId).style.display = 'block';
+            document.getElementById(tabId + 'Tab').classList.add('active');
+        }
+    </script>
+</body>
+</html>
